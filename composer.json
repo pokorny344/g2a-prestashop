@@ -1,9 +1,8 @@
 {
-  "name": "g2a/integration-api-client",
-  "license": "proprietary",
-  "description": "G2A Integration API client",
+  "name": "pokorny344/g2a-prestashop",
   "type": "library",
-  "homepage": "https://www.g2a.com/integration-api",
+  "description": "g2a api client with different namespace",
+  "license": "MIT",
   "require": {
     "pokorny344/guzzle-prestashop": "~6.0"
   },
