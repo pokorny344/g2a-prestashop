@@ -72,11 +72,11 @@ final class ClientTest extends G2ATestCase
         $this->assertEquals(self::API_PROTOCOL . '://' . self::API_DOMAIN . '/', $client->getHttpClient()->getConfig('base_uri'));
 
         $baseUri = 'http://g2a.com';
-        $client->setHttpClient(new \GuzzleHttp\Client([
+        $client->setHttpClient(new \GuzzleHttpPrestashop\Client([
             'base_uri' => $baseUri,
         ]));
 
-        $this->assertInstanceOf(\GuzzleHttp\ClientInterface::class, $client->getHttpClient());
+        $this->assertInstanceOf(\GuzzleHttpPrestashop\ClientInterface::class, $client->getHttpClient());
         $this->assertEquals($baseUri, $client->getHttpClient()->getConfig('base_uri'));
     }
 }

@@ -1,7 +1,7 @@
 <?php
 namespace G2A\IntegrationApi;
 
-use GuzzleHttp\ClientInterface as GuzzleClientInterface;
+use GuzzleHttpPrestashop\ClientInterface as GuzzleClientInterface;
 
 interface ClientInterface
 {

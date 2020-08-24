@@ -77,6 +77,6 @@ abstract class ResponseAbstract implements ResponseInterface
      */
     protected function parseJson()
     {
-        return \GuzzleHttp\json_decode($this->apiResponse->getBody(), true);
+        return \GuzzleHttpPrestashop\json_decode($this->apiResponse->getBody(), true);
     }
 }

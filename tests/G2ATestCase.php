@@ -39,7 +39,7 @@ abstract class G2ATestCase extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @param array $responses First argument to \GuzzleHttp\Handler\MockHandler
+     * @param array $responses First argument to \GuzzleHttpPrestashop\Handler\MockHandler
      *
      * @see https://github.com/guzzle/guzzle/blob/master/docs/testing.rst
      *
@@ -53,8 +53,8 @@ abstract class G2ATestCase extends \PHPUnit\Framework\TestCase
         $client = new Client($config);
 
         if (!empty($responses)) {
-            $handler = \GuzzleHttp\HandlerStack::create(new \GuzzleHttp\Handler\MockHandler($responses));
-            $client->setHttpClient(new \GuzzleHttp\Client([
+            $handler = \GuzzleHttpPrestashop\HandlerStack::create(new \GuzzleHttpPrestashop\Handler\MockHandler($responses));
+            $client->setHttpClient(new \GuzzleHttpPrestashop\Client([
                 'base_uri' => self::API_PROTOCOL . '://' . self::API_DOMAIN . '/',
                 'handler'  => $handler,
             ]));

@@ -105,8 +105,8 @@ abstract class RequestAbstract implements RequestInterface
      * @throws ValidatorException
      * @throws IntegrationApiException
      * @throws BadResponseException
-     * @throws \GuzzleHttp\Exception\BadResponseException
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \GuzzleHttpPrestashop\Exception\BadResponseException
+     * @throws \GuzzleHttpPrestashop\Exception\GuzzleException
      */
     public function send($method, $url)
     {
@@ -130,7 +130,7 @@ abstract class RequestAbstract implements RequestInterface
         try {
             $this->response = $this->client->getHttpClient()->request($method, $apiUrl, $options);
             $this->responseTransformed = $this->remapResponse($this->response);
-        } catch (\GuzzleHttp\Exception\BadResponseException $e) {
+        } catch (\GuzzleHttpPrestashop\Exception\BadResponseException $e) {
             if (!$e->hasResponse() || empty($e->getResponse()->getBody()->getContents())) {
                 throw new EmptyResponseException();
             }
@@ -156,7 +156,7 @@ abstract class RequestAbstract implements RequestInterface
     /**
      * @throws \InvalidArgumentException
      * @throws \G2A\IntegrationApi\Exception\IntegrationApiException
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \GuzzleHttpPrestashop\Exception\GuzzleException
      */
     final public function call()
     {

@@ -77,20 +77,20 @@ class Client implements ClientInterface
     }
 
     /**
-     * @param \GuzzleHttp\ClientInterface $httpClient
+     * @param \GuzzleHttpPrestashop\ClientInterface $httpClient
      */
-    public function setHttpClient(\GuzzleHttp\ClientInterface $httpClient)
+    public function setHttpClient(\GuzzleHttpPrestashop\ClientInterface $httpClient)
     {
         $this->httpClient = $httpClient;
     }
 
     /**
-     * @return \GuzzleHttp\ClientInterface
+     * @return \GuzzleHttpPrestashop\ClientInterface
      */
     public function getHttpClient()
     {
         if (null === $this->httpClient) {
-            $this->httpClient = new \GuzzleHttp\Client([
+            $this->httpClient = new \GuzzleHttpPrestashop\Client([
                 'base_uri' => $this->config->getApiProtocol() . '://' . $this->config->getApiDomain() . '/',
             ]);
         }
