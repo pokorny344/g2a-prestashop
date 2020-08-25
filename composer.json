@@ -4,7 +4,7 @@
   "description": "g2a api client with different namespace",
   "license": "MIT",
   "require": {
-    "pokorny344/guzzle-prestashop": "1.0.0"
+    "pokorny344/guzzle-prestashop": "^1.0.2"
   },
   "autoload": {
     "psr-4": {
