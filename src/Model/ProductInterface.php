@@ -79,6 +79,18 @@ interface ProductInterface
     public function setMinPrice($minPrice);
 
     /**
+     * @return float
+     */
+    public function getRetailMinPrice();
+
+    /**
+     * @param float $retail_min_price
+     *
+     * @return Product
+     */
+    public function setRetailMinPrice($retail_min_price);
+
+    /**
      * @return string
      */
     public function getThumbnail();
@@ -101,6 +113,30 @@ interface ProductInterface
      * @return $this
      */
     public function setSmallImage($smallImage);
+
+    /**
+     * @return string
+     */
+    public function getCoverImage();
+
+    /**
+     * @param string $coverImage
+     *
+     * @return Product
+     */
+    public function setCoverImage($coverImage);
+
+    /**
+     * @return array
+     */
+    public function getImages();
+
+    /**
+     * @param array $images
+     *
+     * @return Product
+     */
+    public function setImages($images);
 
     /**
      * @return string

@@ -26,11 +26,20 @@ final class Product implements ProductInterface
     /** @var float */
     private $minPrice;
 
+    /** @var float */
+    private $retail_min_price;
+
     /** @var string */
     private $thumbnail;
 
     /** @var string */
     private $smallImage;
+
+    /** @var string */
+    private $coverImage;
+
+    /** @var array */
+    private $images;
 
     /** @var string */
     private $description;
@@ -195,6 +204,26 @@ final class Product implements ProductInterface
     }
 
     /**
+     * @return float
+     */
+    public function getRetailMinPrice()
+    {
+        return $this->retail_min_price;
+    }
+
+    /**
+     * @param float $retail_min_price
+     *
+     * @return Product
+     */
+    public function setRetailMinPrice($retail_min_price)
+    {
+        $this->retail_min_price = $retail_min_price;
+
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getThumbnail()
@@ -230,6 +259,46 @@ final class Product implements ProductInterface
     public function setSmallImage($smallImage)
     {
         $this->smallImage = $smallImage;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCoverImage()
+    {
+        return $this->coverImage;
+    }
+
+    /**
+     * @param string $coverImage
+     *
+     * @return Product
+     */
+    public function setCoverImage($coverImage)
+    {
+        $this->coverImage = $coverImage;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    /**
+     * @param array $images
+     *
+     * @return Product
+     */
+    public function setImages($images)
+    {
+        $this->images = $images;
 
         return $this;
     }
