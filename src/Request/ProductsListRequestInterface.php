@@ -69,4 +69,28 @@ interface ProductsListRequestInterface extends RequestInterface
      * @return float|null
      */
     public function getMinPriceTo();
+
+    /**
+     * @param $value
+     *
+     * @return $this
+     */
+    public function setUpdatedAtFrom($value);
+
+    /**
+     * @return string
+     */
+    public function getUpdatedAtFrom();
+
+    /**
+     * @param $value
+     *
+     * @return $this
+     */
+    public function setUpdatedAtTo($value);
+
+    /**
+     * @return string
+     */
+    public function getUpdatedAtTo();
 }

@@ -114,6 +114,46 @@ final class ProductsListRequest extends RequestAbstract implements ProductsListR
     }
 
     /**
+     * @param $value
+     *
+     * @return $this
+     */
+    public function setUpdatedAtFrom($value)
+    {
+        $this->setValue('updatedAtFrom', $value);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUpdatedAtFrom()
+    {
+        return $this->getValue('updatedAtFrom');
+    }
+
+    /**
+     * @param $value
+     *
+     * @return $this
+     */
+    public function setUpdatedAtTo($value)
+    {
+        $this->setValue('updatedAtTo', $value);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUpdatedAtTo()
+    {
+        return $this->getValue('updatedAtTo');
+    }
+
+    /**
      * @return string
      */
     public function getHttpMethod()
